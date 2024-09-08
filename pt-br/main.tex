@@ -1,0 +1,120 @@
+%-------------------------
+% Currículo em Latex
+%-------------------------
+\input{config} % Inclui o arquivo de configuração
+
+%---- Definir Informações do Currículo ----
+
+\newcommand{\name}{Nilton Aguiar dos Santos} % Meu Nome
+\newcommand{\course}{Engenharia de Computação} % Meu Curso
+\newcommand{\phone}{+55 (65) 99278-5635} % Meu Número de Telefone
+\newcommand{\emaila}{nilton.naab@gmail.com} % Meu Email
+\newcommand{\github}{https://github.com/notNilton} % Meu Github
+\newcommand{\linkedin}{https://www.linkedin.com/in/notnilton/} % Meu Linkedin
+\newcommand{\portifolio}{https://github.com/notNilton} % Meu Portifolio
+
+
+\begin{document}
+\fontfamily{cmr}\selectfont
+
+%----------CABEÇALHO-----------------
+{
+\begin{tabularx}{\linewidth}{L r} \\
+    \textbf{\Large \name} & {\raisebox{0.0\height}{\footnotesize \faPhone}\ \phone}
+    \\
+    {Engenheiro de s}
+    &
+    \href{\portifolio}{\raisebox{0.0\height}{\footnotesize \faGlobe}\ {Portfólio}}
+    \\
+    \href{mailto:\emaila} {\raisebox{0.0\height}{\footnotesize \faEnvelope}\ {\emaila}}
+    \href{\linkedin}{\raisebox{0.0\height}{\footnotesize \faLinkedin}\ {LinkedIn} }
+    \href{\github}{\raisebox{0.0\height}{\footnotesize \faGithub}\ {GitHub} }
+\end{tabularx}
+}
+
+\section{\textbf{Educação}}
+    \resumeSubHeadingListStart
+    \resumeSubheading
+    {Bacharelado em Engenharia de Computação}{}
+    {Universidade Federal de Mato Grosso, Brasil}{2020-25}
+    \resumeSubHeadingListEnd
+\vspace{-5.5mm}
+
+%-----------PROJETOS PESSOAIS-----------------
+\section{\textbf{Projetos Pessoais}}
+\resumeSubHeadingListStart
+    \resumeProject
+      { RADARE - \textit{Reconciliation and Data Analysis in a Responsive Environment}}
+      {Aplicativo web baseado em React para reconciliação de dados.}
+      {}
+
+      \resumeItemListStart
+        \item Reconciliação de dados industriais utilizando minimização de funções multivariáveis pelo método dos multiplicadores de Lagrange.
+        \item {Capaz de reconciliar dados em grande escala (milhões de registros), tanto em tempo real quanto em \textit{batches}, identificando e corrigindo erros nos dados por meio da reconciliação e ajustando as variáveis para seus valores corretos.}
+        \item {Client construído em \textbf{Typescript} e \textbf{React} para melhor responsividade, com a biblioteca \textbf{ReactFlow} para interação com os nódulos.}
+        \item {Servidor desenvolvido com \textit{endpoints} de API, facilitando a integração com outras ferramentas e sistemas.}
+        \item {Banco de dados altamente escalável e robusto, implementado com \textbf{PostgreSQL} e \textbf{TimescaleDB} para armazenamento eficiente de séries temporais.}
+        \item {Tecnologias Utilizadas: Python (Flask), TypeScript (React), PostgreSQL (TimescaleDB).}
+      \resumeItemListEnd
+
+       \resumeProject
+      { AAICAP - \textit{Artificial Intelligence Correction and Augmentation Pipeline}}
+      {Projeto baseado em Python para correção de imagens pixel-art geradas por Inteligência Artificial.}
+      {}
+
+      \resumeItemListStart
+        \item {Utiliza técnicas de tratamento de imagens para corrigir falhas geradas em imagens pixel-art.}
+        \item {Capaz de otimizar a qualidade das imagens enquanto mantém características relevantes, ajustando dinamicamente os parâmetros de processamento.}
+        \item {Pipeline de correção e aprimoramento desenhado para processamento eficiente de grandes volumes de imagens, com suporte para automação e API.}
+        
+        \item {Tecnologias Utilizadas: Python, Flask, OpenCV, PIL.}
+      \resumeItemListEnd
+      
+  \resumeSubHeadingListEnd
+\vspace{-8.5mm}
+
+\section{\textbf{Experiência}}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      { Estágio Desenvolvimento Back-end}{Presencial}
+      {SEMA-MT}{Maio 2021 - Maio 2022}
+      \vspace{-2.0mm}
+      \resumeItemListStart
+        \item {Contribuí no desenvolvimento de uma ferramenta de campo utilizando \textbf{C\#} e \textbf{.NET}, projetada para coletar e gerenciar dados em ambientes remotos.}
+        \item {Implementei a funcionalidade de sincronização com banco de dados, garantindo a consistência dos dados tanto em modos online quanto offline.}
+        \item {Desenvolvi e otimizei a capacidade de funcionalidade offline, permitindo que os usuários continuassem a utilizar a ferramenta sem conectividade, com a sincronização automática ao restabelecer a conexão.}
+        \item {Colaborei com a equipe na integração da ferramenta com sistemas internos e externos por meio de APIs robustas.}
+        \item {\textbf{Tecnologias Utilizadas:} C\#, .NET, SQL Server, APIs RESTful.}
+      \resumeItemListEnd
+
+
+    \vspace{-3.0mm}
+    
+        \resumeSubheading
+      { Desenvolvedor Junior Full Stack}{Presencial}
+      {PGE-MT}{Maio 2024 - Atual}
+      \vspace{-2.0mm}
+      \resumeItemListStart
+        \item {Implementei automações com \textbf{Google Apps Script} e \textbf{AppSheet}, otimizando fluxos internos.}
+        \item {Desenvolvi sistemas de gerenciamento de processos jurídicos e controle de escalas para procuradores, usando \textbf{TypeScript} e \textbf{React} no front-end, \textbf{PostgreSQL} como banco de dados e deploy na \textbf{Firebase} com autenticação via \textbf{Google Authentication}.}
+        \item {Integrei o \textbf{ChatGPT} para resumos automáticos de processos e pré-avaliação de litispendência, utilizando \textbf{Node.js} e a \textbf{API} do ChatGPT.}
+        \item {\textbf{Tecnologias Utilizadas:} TypeScript, React, PostgreSQL, Firebase, Node.js, Google Apps Script, AppSheet, ChatGPT API.}
+      \resumeItemListEnd
+
+    \vspace{-3.0mm}
+  \resumeSubHeadingListEnd
+  
+
+\section{\textbf{Habilidades Técnicas e Interesses}}
+\begin{itemize}[leftmargin=0.05in, label={}]
+    \small{\item{
+     \textbf{Idiomas:}{ Português (nativo), Inglês (fluente), Espanhol (mediano), Francês (iniciante) e Alemão (iniciante).} \\
+     \textbf{Linguagens:}{ C/C++, Rust, Python e TypeScript. } \\
+     \textbf{Bibliotecas:}{ NumPy, Pandas, ReactJS e Redux. }\\ 
+     \textbf{Ferramentas:}{ Node.js, Git, GitHub,  Gitlab, AppScript e AppSheet. } \\ 
+     \textbf{Frameworks:}{ ReactJS, Flask, Express.js e FastAPI. } \\
+     \textbf{Nuvem/Bancos de Dados:}{ Firebase, PostgreSQL e TimescaleDB. } \\  
+    }}
+\end{itemize}
+
+\end{document}
