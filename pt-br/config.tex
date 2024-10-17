@@ -23,7 +23,11 @@
 \usepackage{fontawesome5}
 \usepackage{multicol}
 \usepackage{graphicx}
-\usepackage{cfr-lm}
+
+% Pacote para usar a fonte Roboto
+\usepackage[sfdefault]{roboto} 
+\renewcommand{\familydefault}{\sfdefault} % Define Roboto como a fonte padrão do documento
+
 \usepackage[T1]{fontenc}
 
 \setlength{\multicolsep}{0pt}
@@ -112,4 +116,4 @@
 \newcolumntype{L}{>{\raggedright\arraybackslash}X}%
 \newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
 \newcolumntype{C}{>{\centering\arraybackslash}X}%
-%---- Fim dos Pacotes e Funções ------
+%---- Fim dos Pacotes e Funções ----
