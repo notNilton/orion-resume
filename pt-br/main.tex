@@ -1,121 +1,77 @@
-%-------------------------
-% Currículo em Latex
-%-------------------------
-\input{config} % Inclui o arquivo de configuração
-
-%---- Definir Informações do Currículo ----
-
-\newcommand{\name}{Nilton Aguiar dos Santos} % Meu Nome
-\newcommand{\course}{Engenharia de Computação} % Meu Curso
-\newcommand{\phone}{+55 (65) 99278-5635} % Meu Número de Telefone
-\newcommand{\emaila}{nilton.naab@gmail.com} % Meu Email
-\newcommand{\github}{https://github.com/notNilton} % Meu Github
-\newcommand{\linkedin}{https://www.linkedin.com/in/notnilton/} % Meu Linkedin
-\newcommand{\portifolio}{https://github.com/notNilton} % Meu Portifolio
-
+% main.tex
+\input{config}
 
 \begin{document}
 
-%----------CABEÇALHO-----------------
-{
-\begin{tabularx}{\linewidth}{L r}                                                               \\
-    \textbf{\Large \name} & {\raisebox{0.0\height}{\footnotesize \faPhone}\ \phone}
-    \\
-    {Engenheiro de Soluções Tecnológicas}
-                          &
-    \href{\portifolio}{\raisebox{0.0\height}{\footnotesize \faGlobe}\ {Portfólio}}
-    \\
-    \href{mailto:\emaila} {\raisebox{0.0\height}{\footnotesize \faEnvelope}\ {\emaila}}
-    \href{\linkedin}{\raisebox{0.0\height}{\footnotesize \faLinkedin}\ {LinkedIn} }
-    \href{\github}{\raisebox{0.0\height}{\footnotesize \faGithub}\ {GitHub} }
-\end{tabularx}
-}
-\vspace{1mm}
+\begin{center}
+  \textbf{\Huge Nilton Santos} \\
+  \small +55 (65) 99278-5635 $|$ \href{mailto:nilton.naab@gmail.com}{nilton.naab@gmail.com} $|$ 
+  \href{https://linkedin.com/in/notnilton}{linkedin.com/in/notnilton} $|$
+  \href{https://github.com/notnilton}{github.com/notnilton}
+\end{center}
 
-Graduando em Engenharia de Computação, com vivência nas áreas de Front-end,
-Back-end, Banco de Dados e gerenciamento de projetos, focado em alcançar
-resultados eficientes e de alta qualidade.
+\section*{Resumo}
 
-\section{\textbf{Educação}}
-\resumeSubHeadingListStart
-\resumeSubheading
-{Bacharelado em Engenharia de Computação}{}
-{Universidade Federal de Mato Grosso, Brasil}{2020-25}
-\resumeSubHeadingListEnd
-\vspace{-5.5mm}
+Engenheiro de soluções orientado a impacto comercial. Combino expertise técnica com tradução de requisitos em soluções escaláveis. Experiência em projetos que reduziram custos operacionais em \textbf{15\%+} através de automação e otimização de sistemas. Foco em gerar valor tangível alinhando tecnologia às necessidades estratégicas da organização.
 
-%-----------PROJETOS PESSOAIS-----------------
-\section{\textbf{Projetos Pessoais}}
-\resumeSubHeadingListStart
-\resumeProject
-{ RADARE - \textmd{Reconciliation and Data Analysis in a Responsive Environment}}
-{Aplicativo web baseado em React para reconciliação de dados.}
-{\textbf{Duração: 6 Meses}}
-
-\resumeItemListStart
-\item \textbf{Minha responsabilidade:} Desenvolver e implementar um sistema de reconciliação de dados industriais.
-\item \textbf{O que eu executei:} Criei uma interface interativa e implementei APIs para garantir a integridade dos dados reconciliados.
-\item \textbf{Lucro gerado:} A solução resultou em uma economia de \textbf{R\$15.000} por mês com a otimização dos processos de dados.
-\item \textbf{Tecnologias utilizadas:} \textbf{Typescript, React, ReactFlow, PostgreSQL, TimescaleDB.}
-\resumeItemListEnd
-
-\vspace{-2mm}
-
-\resumeProject
-{ AAICAP - \textmd{Artificial Intelligence Correction and Augmentation Pipeline}}
-{Projeto baseado em Python para correção de imagens pixel-art geradas por Inteligência Artificial.}
-{\textbf{Duração: 12 Meses}}
-
-\resumeItemListStart
-\item \textbf{Minha responsabilidade:} Desenvolver um pipeline para correção de imagens pixel-art geradas por IA.
-\item \textbf{O que eu executei:} Construi um pipeline automatizado que ajusta parâmetros de processamento e fornece uma API para integração com outros sistemas.
-\item \textbf{Lucro gerado:} A implementação reduziu em \textbf{R\$10.000} os custos com processamento manual de imagens.
-\item \textbf{Tecnologias utilizadas:} \textbf{Python, Flask, OpenCV, PIL.}
-\resumeItemListEnd
-
-\resumeSubHeadingListEnd
-\vspace{-8.5mm}
-
-\section{\textbf{Experiência}}
-\resumeSubHeadingListStart
-\resumeSubheading
-{ Engenheiro Back-end \textmd{(Secretaria de Estado de Meio Ambiente - MT)}}{}
-{}{Maio 2020 - Maio 2022}
-\vspace{-2.0mm}
-\resumeItemListStart
-\item \textbf{Minha responsabilidade:} Contribuir no desenvolvimento de uma ferramenta para coleta e gerenciamento de dados remotos, utilizando C\# e .NET.
-\item \textbf{O que eu executei:} Implementei sincronização de dados offline/online e integração com APIs para conectar sistemas internos e externos.
-\item \textbf{Custo cortado:} A solução reduziu em R\$12.000 os custos operacionais, automatizando processos manuais de sincronização de dados.
-\item \textbf{Tecnologias utilizadas:} \textbf{C\#, .NET, SQL Server, APIs RESTful.}
-\resumeItemListEnd
-
-\vspace{-2mm}
-
-\resumeSubheading
-{ Engenheiro Full Stack \textmd{(Procuradoria Geral do Estado - MT)}}{}
-{}{Maio 2024 - Atual}
-\vspace{-2.0mm}
-\resumeItemListStart
-\item \textbf{Minha responsabilidade:} Implementar automações e desenvolver sistemas para otimizar processos jurídicos.
-\item \textbf{O que eu executei:} Automatizei fluxos de trabalho e otimizei o gerenciamento de processos e controle de escalas. Implementei resumos automáticos de processos, reduzindo a necessidade de revisão manual.
-\item \textbf{Custo cortado:} A automação gerou uma economia de R\$20.000 mensais, reduzindo o tempo gasto em tarefas manuais.
-\item \textbf{Tecnologias utilizadas:} \textbf{C\#, .NET, SQL Server, APIs RESTful, ChatGPT Customizado.}
-\resumeItemListEnd
-
-
-\vspace{-5.5mm}
+\section{Habilidades Técnicas}
+\resumeSubHeadingList
+  \resumeItem{\textbf{Linguagens}: Python, JavaScript/TypeScript, C, SQL}
+  \resumeItem{\textbf{Frameworks}: Flask, FastAPI, Node.js/Express 
+  | \textbf{Nuvem}: AWS (RDS, Lambda), Firebase, Google Cloud}
+  \resumeItem{\textbf{Bancos de Dados}: PostgreSQL, SQLite 
+  | \textbf{ORM/ODM}: SQLAlchemy, Prisma, TypeORM}
+  \resumeItem{\textbf{Ferramentas}: Git Flow, Docker, CI/CD (GitHub Actions), Chat GPT API
+  | \textbf{APIs}: RESTful, WebSocket}
 \resumeSubHeadingListEnd
 
-\section{\textbf{Habilidades Técnicas e Interesses}}
-\begin{itemize}[leftmargin=0.05in, label={}]
-    \small{\item{
-          \textbf{Idiomas:}{ Português (nativo), Inglês (fluente), Espanhol (mediano), Francês (iniciante) e Alemão (iniciante).} \\
-          \textbf{Linguagens:}{ \textbf{C/C++}(7 anos), \textbf{Rust}(1 ano), \textbf{Python}(5 anos), \textbf{TypeScript}(3 anos) e \textbf{Javascript}(5 anos). } \\
-          \textbf{Bibliotecas:}{ NumPy, Pandas, ReactJS e Redux. }\\
-          \textbf{Ferramentas:}{ Node.js, Git, GitHub,  Gitlab, AppScript, AppSheet e Firebase.} \\
-          \textbf{Frameworks:}{ ReactJS, Flask, Express.js e FastAPI. } \\
-          \textbf{Bancos de Dados:}{ PostgreSQL e TimescaleDB. } \\
-          }}
-\end{itemize}
+\section{Projetos Pessoais}
+\resumeSubHeadingList
+  \resumeSubheading
+      {RADARE - Reconciliation and Data Analysis in a Responsive Environment}{\textbf{Duração}: 12 meses}
+      {Projeto de Reconciliação de Dados}{Python, TypeScript, SQLite}
+  \resumeSubHeadingList
+        \resumeItem{\textbullet\ Desenvolvi e implementei um sistema de reconciliação de dados industriais}
+        \resumeItem{\textbullet\ Criei uma interface interativa e implementei APIs para garantir a integridade dos dados reconciliados.}
+        \resumeItem{\textbullet\ A solução resultou em uma economia de \textbf{R\$10.000} por mês com a otimização dos processos de dados.}
+  \resumeSubHeadingListEnd
+  \resumeSubheading
+      {AIICP - Artificial Intelligence Image Correction and Augmentation Pipeline}{\textbf{Duração}: 6 meses} 
+      {Projeto de correção de imagens pixel-art geradas por I.A.}{Python, Flask, OpenCV, PIL, Flask}
+  \resumeSubHeadingList
+          \resumeItem{\textbullet\ Construí um pipeline automatizado que ajusta parâmetros de processamento e fornece uma API para integração com outros sistemas.}
+  \resumeSubHeadingListEnd
+\resumeSubHeadingListEnd
+
+\section{Experiências Profissionais}
+\resumeSubHeadingList
+  \resumeSubheading
+      {Estagiário em Desenvolvimento de Software}{Jun 2021 -- Jun 2023}
+      {Secretaria de Meio Ambiente - SEMA/MT}{Cuiabá, MT}
+      \resumeSubHeadingList
+          \resumeItem{\textbullet\ Desenvolvi uma plataforma de coleta e gestão de dados ambientais utilizando \textbf{.NET Core 6}, processando mais de 10 mil registros diários de sensores remotos.}
+          \resumeItem{\textbullet\ Implementei um sistema de sincronização offline/online com \textbf{SQLite} para armazenamento local e \textbf{REST APIs} para integração em nuvem.}
+          \resumeItem{\textbullet\ Otimizei fluxos ETL com \textbf{Entity Framework}, reduzindo o tempo de processamento em 30\%.}
+          \resumeItem{\textbullet\ Integrei 3 sistemas governamentais via \textbf{APIs SOAP/REST}, unificando o acesso a dados de licenciamento ambiental.}
+          \resumeItem{\textbullet\ Modelei um banco de dados relacional (\textbf{SQL Server}) para armazenamento de dados geoespaciais e métricas ambientais.}
+      \resumeSubHeadingListEnd
+
+  \resumeSubheading
+      {Engenheiro de Soluções}{Jan 2024 -- Presente}
+      {Procuradoria Geral do Estado - PGE/MT}{Cuiabá, MT}
+      \resumeSubHeadingList
+          \resumeItem{\textbullet\ Projetei e implementei um sistema de automação jurídica com \textbf{Node.js/TypeScript}, integrando 5 fluxos de trabalho críticos e reduzindo o tempo de processamento em 40\%.}
+          \resumeItem{\textbullet\ Otimizei a gestão processual por meio de \textbf{microsserviços} para controle de escalas e rastreamento automatizado de prazos legais.}
+          \resumeItem{\textbullet\ Desenvolvi um módulo de sumarização automática de processos utilizando \textbf{NLP}, eliminando 25 horas mensais de revisão manual.}
+          \resumeItem{\textbullet\ Implementei um chatbot jurídico com \textbf{Dialogflow} e integração via API REST, atendendo mais de 300 requisições diárias.}
+          \resumeItem{\textbullet\ Criei um sistema de análise documental assistida por IA (\textbf{GPT-4}), reduzindo o tempo de triagem em 65\% com validação por embeddings.}
+      \resumeSubHeadingListEnd
+\resumeSubHeadingListEnd
+\section{Formação Acadêmica}
+\resumeSubHeadingList
+  \resumeSubheading
+      {Universidade Federal do Mato Grosso}{Cuiabá, Mato Grosso, Brasil}
+      {Graduação em Engenharia de Computação}{2025}
+\resumeSubHeadingListEnd
 
 \end{document}

@@ -1,119 +1,53 @@
-%-------------------------
-% Configuração do Currículo em Latex
-%-------------------------
+\documentclass[letterpaper,10pt]{article}
 
-%---- Pacotes e Funções Necessárias ----
-
-\documentclass[a4paper,11pt]{article}
 \usepackage{latexsym}
-\usepackage{xcolor}
-\usepackage{float}
-\usepackage{ragged2e}
 \usepackage[empty]{fullpage}
-\usepackage{wrapfig}
-\usepackage{lipsum}
-\usepackage{tabularx}
 \usepackage{titlesec}
-\usepackage{geometry}
 \usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
 \usepackage{verbatim}
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
 \usepackage{fancyhdr}
-\usepackage{fontawesome5}
-\usepackage{multicol}
-\usepackage{graphicx}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
 
-% Pacote para usar a fonte Roboto
-\usepackage[sfdefault]{roboto} 
-\renewcommand{\familydefault}{\sfdefault} % Define Roboto como a fonte padrão do documento
+% Font options
+\usepackage[sfdefault]{roboto}  % Sans-serif font
 
-\usepackage[T1]{fontenc}
-
-\setlength{\multicolsep}{0pt}
 \pagestyle{fancy}
-\fancyhf{} % limpar todos os campos de cabeçalho e rodapé
+\fancyhf{}
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
-\geometry{left=1.4cm, top=0.8cm, right=1.2cm, bottom=1cm}
 
-\usepackage[most]{tcolorbox}
-\tcbset{
-    frame code={}
-    center title,
-    left=0pt,
-    right=0pt,
-    top=0pt,
-    bottom=0pt,
-    colback=gray!20,
-    colframe=white,
-    width=\dimexpr\textwidth\relax,
-    enlarge left by=-2mm,
-    boxsep=4pt,
-    arc=0pt, outer arc=0pt,
-}
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
 
 \urlstyle{same}
+\raggedbottom
 \raggedright
 \setlength{\tabcolsep}{0in}
 
-% Formatação de Seções
-\titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+% Section formatting
+\titleformat{\section}{\Large\bfseries\scshape\raggedright}{}{0em}{}[\titlerule]
 
-%-------------------------
-% Comandos personalizados
-\newcommand{\resumeItem}[2]{
-  \item{
-    \textbf{#1}{\hspace{0.5mm}#2 \vspace{-0.5mm}}
-  }
-}
+% Ensure PDF is machine readable
+\pdfgentounicode=1
 
-\newcommand{\resumePOR}[3]{
-\vspace{0.5mm}\item
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-        \textbf{#1}\hspace{0.3mm}#2 & \textit{\small{#3}} 
-    \end{tabular*}
-    \vspace{-2mm}
-}
-
+% Custom commands
+\newcommand{\resumeItem}[1]{\item\small{#1}}
 \newcommand{\resumeSubheading}[4]{
-\vspace{0.5mm}\item
-    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
-        \textbf{#1} & \textit{\footnotesize{#4}} \\
-        \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
-    \end{tabular*}
-    \vspace{-2.4mm}
+\vspace{-1pt}\item
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \textit{#3} & \textit{#4} \\
+  \end{tabular*}\vspace{-7pt}
 }
-
-\newcommand{\resumeProject}[4]{
-\vspace{0.5mm}\item
-    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
-        \textbf{#1} & \textit{\footnotesize{#3}} \\
-        \footnotesize{\textit{#2}} & \footnotesize{#4}
-    \end{tabular*}
-    \vspace{-2.4mm}
-}
-
-\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
-% \renewcommand{\labelitemii}{$\circ$}
-\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=0mm]}
-\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
-\newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
-\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-2mm}}
-\newcommand{\cvsection}[1]{%
-\vspace{2mm}
-\begin{tcolorbox}
-    \textbf{\large #1}
-\end{tcolorbox}
-    \vspace{-4mm}
-}
-\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
-\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
-\newcolumntype{C}{>{\centering\arraybackslash}X}%
-%---- Fim dos Pacotes e Funções ----
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\newcommand{\resumeSubHeadingList}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
